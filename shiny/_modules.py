@@ -1,6 +1,6 @@
 __all__ = ("Module",)
 
-from typing import Any, Callable, Optional
+from typing import Any, Callable, Optional, Dict
 
 from htmltools import TagChildArg
 
@@ -116,6 +116,15 @@ class ModuleSession(Session):
 
     def __getattr__(self, attr: str) -> Any:
         return getattr(self._parent, attr)
+
+    def send_input_message(self, id: str, message: Dict[str, object]) -> None:
+        return super().send_input_message(self.ns(id), message)
+
+    def ns(self, id: Optional[str] = None) -> str:
+        if id is None:
+            return self._ns
+        else:
+            return self._ns + "-" + id
 
 
 @add_example()

@@ -670,6 +670,9 @@ class Session:
 
         return {"deps": deps, "html": res["html"]}
 
+    def ns(self, id: Optional[str] = None) -> Optional[str]:
+        return id
+
 
 # ======================================================================================
 # Inputs

@@ -136,6 +136,10 @@ Create segments of UI content.
     ui.navset_pill
     ui.navset_pill_card
     ui.navset_pill_list
+    ui.nav_insert
+    ui.nav_remove
+    ui.nav_show
+    ui.nav_hide
 
 
 UI panels

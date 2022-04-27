@@ -20,6 +20,7 @@ from ._insert import *
 from ._markdown import *
 from ._modal import *
 from ._navs import *
+from ._navs_dynamic import *
 from ._notification import *
 from ._output import *
 from ._page import *
